@@ -12,8 +12,8 @@ using System.Data.SqlClient;
 namespace PraktikumADO
 {
 
-    
-    public partial class Form1: Form
+
+    public partial class Form1 : Form
     {
         SqlConnection conn;
         SqlCommand cmd;
@@ -34,5 +34,21 @@ namespace PraktikumADO
 
         }
 
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Koneksi();
+                conn.Open();
+
+                MessageBox.Show("Koneksi ke database berhasil");
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                _ = MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
+
