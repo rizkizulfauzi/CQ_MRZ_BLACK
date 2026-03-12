@@ -22,9 +22,17 @@ namespace PraktikumADO
             InitializeComponent();
         }
 
+        private void Koneksi()
+        {
+            conn = new SqlConnection(
+                "Data Source=NJOELL18\\MRZULFAUZI;Initial Catalog=DBAkademikADO;Integrated Secyrity=True"
+                );
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
+
     }
 }
