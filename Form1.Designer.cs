@@ -116,7 +116,7 @@ namespace PraktikumADO
             this.btnInsertProdi.TabIndex = 7;
             this.btnInsertProdi.Text = "Insert Prodi";
             this.btnInsertProdi.UseVisualStyleBackColor = true;
-            this.btnInsertProdi.Click += new System.EventHandler(this.bbtnInsertProdi_Click);
+            this.btnInsertProdi.Click += new System.EventHandler(this.btnInsertProdi_Click);
             // 
             // bbtnUpdateMK
             // 
