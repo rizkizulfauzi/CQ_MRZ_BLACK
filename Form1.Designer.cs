@@ -1,4 +1,6 @@
-﻿namespace PraktikumADO
+﻿using System;
+
+namespace PraktikumADO
 {
     partial class Form1
     {
@@ -114,6 +116,7 @@
             this.btnInsertProdi.TabIndex = 7;
             this.btnInsertProdi.Text = "Insert Prodi";
             this.btnInsertProdi.UseVisualStyleBackColor = true;
+            this.btnInsertProdi.Click += new System.EventHandler(this.bbtnInsertProdi_Click);
             // 
             // bbtnUpdateMK
             // 
@@ -123,6 +126,7 @@
             this.bbtnUpdateMK.TabIndex = 8;
             this.bbtnUpdateMK.Text = "Update MK";
             this.bbtnUpdateMK.UseVisualStyleBackColor = true;
+            this.bbtnUpdateMK.Click += new System.EventHandler(this.bbtnUpdateMK_Click);
             // 
             // Form1
             // 
@@ -156,6 +160,8 @@
         private System.Windows.Forms.Button btnHitungDosen;
         private System.Windows.Forms.Button btnInsertProdi;
         private System.Windows.Forms.Button bbtnUpdateMK;
+
+        public EventHandler bbtnInsertProdi_Click { get; private set; }
     }
 }
 

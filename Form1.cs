@@ -103,9 +103,9 @@ namespace PraktikumADO
 
                 string query = "UPDATE Mahasiswa SET Alamat ='Yogyakarta' WHERE NIM='23110100001'";
                 cmd = new SqlCommand(query, conn);
-                int hasil = cmd.ExecuteNonQuery(); 
+                int hasil = cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Jumlah baris terpengaruh :" + hasil);
+                MessageBox.Show("Jumlah baris terpengaruh :" + hasil, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 conn.Close();
             }
             catch (Exception ex)
@@ -130,6 +130,27 @@ namespace PraktikumADO
                 conn.Close();
             }
 
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void  bbtnUpdateMK_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Koneksi();
+                conn.Open();
+
+                string query = "UPDATE MataKuliah SET SKS = 4 WHERE KodeMK = 'IF210101'";
+                cmd = new SqlCommand(query, conn);
+                int hasil = cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Jumlah baris terpengaruh :" + hasil, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                conn.Close();
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
